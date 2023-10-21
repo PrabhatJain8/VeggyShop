@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="design vh-100 col col-3 bg-dark">
+            <marquee width="50%" direction="right"><h1 class="bold">Hurry</h1></marquee>
+            <h1>Order Fresh</h1>
+            <h1>Fruits</h1>
+            <h1>Now!</h1>
+            <div class="search-fruit">
+                <i class="bi bi-search"></i> <input class="w-75 p-1 m-1 fruitSearch"  type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+                    placeholder="Start searching fruits...">
+            </div>
+            <a *ngIf="role=='Admin'" (click)="goToAddFruit()" class="mt-4 btn btn-lg btn-dark designAdd">Add Fruits</a>
+        </div>
+        <div class="col col-9">
+            <div class="cardDesign" *ngFor="let veggy of allFruits | filter:searchText">
+                <div class="card singleCard" style="width:200px">
+                    <img class="card-img-top" src="{{veggy.image}}" alt="{{veggy.name}} image" height="150"
+                        style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">{{veggy.name}}</h4>
+                        <p class="card-text">&#x20B9;{{veggy.price}}/kg</p>
+                        <a *ngIf="role!='Admin'" (click)="AddCart(veggy)" class="cardBtn btn btn-light">Add To Cart</a>
+                        <i *ngIf="role=='Admin'" (click)="Delete(veggy.id)" class=" designIcon bi bi-trash"></i>
+                        <i *ngIf="role=='Admin'" (click)="goToEditFruit(veggy.id)" class="designIconp bi bi-pen"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

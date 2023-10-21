@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="myform">
+        <h1 class="designAdd">ADD VEGETABLES</h1>
+        <form #form="ngForm" class="designform" (ngSubmit)="onSubmit()" >
+
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control"  #vname="ngModel" [(ngModel)]="veggy.name" name="vName" required>
+            </div>
+            <div [hidden]="vname.valid || !vname.touched">
+                <span class="text-danger">Name Feild is required</span>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label>Price</label>
+                <input type="number" class="form-control"  #vprice="ngModel" [(ngModel)]="veggy.price" name="vPrice" required>
+            </div>
+            <div [hidden]="vprice.valid || !vprice.touched">
+                <span class="text-danger">Price Feild is required</span>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label>Image Url</label>
+                <input class="form-control"  #vurl="ngModel" [(ngModel)]="veggy.image" name="vURL" required>
+            </div>
+            <div [hidden]="vurl.valid || !vurl.touched">
+                <span class="text-danger">Image Url Feild is required</span>
+            </div>
+
+
+            <button class=" mt-5 vegbtn btn btn-lg btn-light" [disabled]="form.invalid">ADD VEGGY</button>
+
+        </form>
+    </div>
+</div>

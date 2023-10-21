@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="tagline">Order Fresh Now !</h1>
+    <div class="bigBox">
+        <div class="veggyBox">
+            <h1>Vegetables</h1>
+            <h2>100% Fresh</h2>
+            <a *ngIf="role=='Admin'" [routerLink]="['/vegetables']" class="veggyBtn btn btn-lg btn-light mt-3">Your Vegetables</a>
+            <a *ngIf="role!='Admin'" [routerLink]="['/vegetables']" class="veggyBtn btn btn-lg btn-light mt-3">Order Now</a>
+        </div>
+        <div class="fruitBox">
+            <h1>Fruits</h1>
+            <h2>100% Fresh</h2>
+            <a *ngIf="role=='Admin'" [routerLink]="['/fruits']" class="fruitsBtn btn btn-lg btn-light mt-3">Your Fruits</a>
+            <a *ngIf="role!='Admin'" [routerLink]="['/fruits']" class="fruitsBtn btn btn-lg btn-light mt-3">Order Now</a>
+        </div>
+    </div>
+</div>

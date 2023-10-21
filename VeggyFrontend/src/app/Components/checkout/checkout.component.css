@@ -1,0 +1,30 @@
+.designAdd{
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px 8px green;
+    font-weight: 700;
+}
+
+.designform{
+    background: linear-gradient(rgb(0, 61, 0),black);
+    color: white;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px black;
+    width: 50%;
+    margin: 0 auto 30px;
+    
+}
+
+.orderbtn
+{
+    font-weight: 700;
+    
+}
+.orderbtn:hover{
+    box-shadow: 2px 2px 8px whitesmoke;
+    /* background-color: black;
+    color: white; */
+    /* font-weight: 900; */
+}
+

@@ -1,0 +1,15 @@
+.myform{
+    color: white;
+    margin: 5% auto;
+    background: linear-gradient(darkgreen,black);
+    padding: 2% 0 4% 0;
+    max-height: 600px;
+    width: 35%;
+    border: solid #000 3px;
+    border-radius: 5px 100px 5px;
+    box-shadow: 15px 10px 8px #000;
+    
+}
+a{
+    text-decoration: none;
+}

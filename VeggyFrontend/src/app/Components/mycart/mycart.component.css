@@ -1,0 +1,56 @@
+.Cdesign
+{
+    text-shadow: 2px 2px 8px darkgreen;
+    font-weight: 800;
+}
+
+
+.TableDesign
+{
+    box-shadow: 0px 10px 8px #000 ;
+    background: linear-gradient(black,rgb(0, 32, 0));
+    color: white !important;
+}
+
+.totalDesign
+{
+    font-weight: 500;
+    text-shadow: 2px 2px 8px lime;
+
+}
+
+.quantDesign
+{
+    background: white;
+
+}
+
+.btnShop
+{
+    font-weight: 700;
+    background-color: whitesmoke;
+    color: #000;
+    margin: 5px 0;
+    
+
+    
+}
+.btnShop:hover
+{   font-weight: 900;
+    box-shadow: 2px 2px 8px black;
+}
+
+.btnCheck
+{
+    font-weight: 700;
+    background: black;
+    color:white;
+    
+}
+
+.btnCheck:hover
+{   font-weight: 900;
+    box-shadow: 2px 2px 8px whitesmoke;
+}
+
+

@@ -1,0 +1,53 @@
+<div  class="container">
+    <h1 class="pb-3 text-center text-light Cdesign">CART</h1>
+    <div *ngIf="myCart.length>0">
+        
+
+        <table class="TableDesign table  table-bordered ">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price (per kg)</th>
+                    <th></th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of myCart index as i">
+                    <th>{{i+1}}</th>
+                    <td>{{cart.itemName}}</td>
+                    <td>
+                        <form>
+                            <input class="quantDesign" #quant="ngModel" type="number" [(ngModel)]="cart.quantity" name="quant"
+                                required min=1 max=20 (change)="callme(cart)">
+                            <!-- <span class="text-danger" *ngIf="quant.valid && quant.dirty && " ><span >{{callme(cart.id)}}</span></span> -->
+                        </form>
+                    </td>
+                    <td>&#x20B9;{{cart.price}}</td>
+                    <td><a (click)="deleteItem(cart.id)"><i class="bi bi-trash text-danger"></i></a></td>
+                </tr>
+
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>SubTotoal</th>
+                    <td class="totalDesign">&#x20B9;{{total}}/-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col">
+                <a class="btn btnShop form-control" [routerLink]="['/home']">Continue Shopping <i class="bi bi-cart weight"></i> </a>
+                <a class="btn btnCheck form-control" (click)="goToCheck(total)">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div *ngIf="myCart.length==0">
+        <p class="text-danger text-center "><b> Your cart is empty</b>  </p>
+    </div> -->
+
+</div>

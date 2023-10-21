@@ -1,0 +1,23 @@
+<div class="container myform">
+    <form class="w-75 mx-auto" #form="ngForm" (ngSubmit)="onSubmit()">
+        <h1 class="text-center">LOGIN</h1>
+        <div class="form-group mt-3">
+            <label>Email</label>
+            <input class="form-control"  #user="ngModel" [(ngModel)]="login.email" name="userLogin" required>
+        </div>
+        <div [hidden]="user.valid || !user.touched">
+            <span class="text-danger">Email Feild is required</span>
+        </div>
+        <div class="form-group mt-3">
+            <label>Password</label>
+            <input type="password" class="form-control" #pass="ngModel" [(ngModel)]="login.password" name="userPassword" required>
+        </div>
+        <div [hidden]="pass.valid || !pass.touched">
+            <span class="text-danger">Password Feild is required</span>
+        </div>
+        
+        <button type="submit" class="btn bg-dark text-light form-control mt-3" [disabled]="form.invalid">Login</button>
+        <div  class="text-center mt-3">Not a valid user? <a  [routerLink]="['/register']">Register now</a></div>
+        
+    </form>
+</div>

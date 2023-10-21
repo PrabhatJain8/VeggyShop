@@ -1,0 +1,115 @@
+.design{
+    /* background-color: black !important; */
+    background: linear-gradient(rgb(3, 31, 0),rgb(6, 15, 9));
+    color: white;
+    text-align: center;
+    padding-top:10%;
+    position: sticky;
+    top:0 ;
+    
+}
+
+.bold{
+    font-weight: 900;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px green;
+}
+
+.cardDesign{
+    padding: 3%;
+    display:inline-block;
+
+}
+
+.singleCard{
+    border: 2px solid black;
+    background: linear-gradient(darkgreen,black);
+    color:white;
+    box-shadow: 8px 8px 8px #000;
+}
+
+.cardBtn{
+    font-weight: 600;
+    margin: 0 25px ;
+    
+}
+.cardBtn:hover{
+    color: white;
+    background-color: black;
+    font-weight: 600;
+}
+
+.designAdd{
+    font-weight: 700;
+    border: 3px solid black;
+    box-shadow: 2px 2px 8px green;
+}
+
+.designIcon
+{
+    font-size: x-large;
+    padding: 0 5px;
+    position: absolute;
+    top: 0px;
+    background-color: black;
+    color: red;
+    opacity: 0.4;
+    left: 0px;
+
+}
+
+.designIcon:hover{
+    opacity:1;
+}
+
+.designIconp{
+    font-size: x-large;
+    padding: 0 5px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: white;
+    background-color: black;
+    opacity: 0.4;
+}
+.designIconp:hover{
+    opacity: 1;
+}
+
+.veggySearch{
+    font-weight: 700;
+    border: 3px solid black;
+    box-shadow: 2px 2px 8px green;
+    border-radius: 8px;
+}
+.veggySearch:focus
+{
+    background-color: black;
+    color:ghostwhite;
+    font-weight: 700;
+}
+
+
+.designMobile{
+    display:none;
+}
+
+@media only screen and (max-width: 920px) {
+  .design{
+    display:none;
+  }
+  .designMobile{
+    display: block;
+    background: linear-gradient(rgb(3, 31, 0),rgb(6, 15, 9));
+    color: white;
+    text-align: center;
+    padding-top:10px;
+    position: sticky;
+    top:0 ;
+    z-index: 1;
+  }
+  .veggyMobile{
+    width:100%;
+    text-align: center;
+  }
+}

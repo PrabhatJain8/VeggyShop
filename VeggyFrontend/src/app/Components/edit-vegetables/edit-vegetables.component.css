@@ -1,0 +1,27 @@
+.designAdd{
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px 8px green;
+    font-weight: 700;
+}
+
+.designform{
+    background: linear-gradient(rgb(0, 61, 0),black);
+    color: white;
+    padding: 4%;
+    border-radius: 10px;
+    /* margin-top: 2%; */
+    box-shadow: 10px 10px 8px black;
+    
+}
+
+.vegbtn
+{
+    margin: 0 40%;
+    font-weight: 700;
+}
+
+.vegbtn:hover{
+    background-color: black;
+    color: white;
+}

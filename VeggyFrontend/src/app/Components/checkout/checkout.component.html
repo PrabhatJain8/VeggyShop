@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="myform">
+        <h1 class="designAdd">DETAILS</h1>
+        <form #form="ngForm" class="designform" (ngSubmit)="initPay()" >
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input class="form-control"  #vname="ngModel" [(ngModel)]="detail.fullName"  name="vName" required>
+            </div>
+            <div [hidden]="vname.valid || !vname.touched">
+                <span class="text-danger">Name Feild is required</span>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label>Address</label>
+                <input type="text" class="form-control" [(ngModel)]="detail.address"  #vprice="ngModel"  name="vPrice" required>
+            </div>
+            <div [hidden]="vprice.valid || !vprice.touched">
+                <span class="text-danger">Address Feild is required</span>
+            </div>
+
+
+            <div class="form-group mt-3">
+                <label>City</label>
+                <input class="form-control"  #vurl="ngModel" [(ngModel)]="detail.city" name="vURL" required>
+            </div>
+            <div [hidden]="vurl.valid || !vurl.touched">
+                <span class="text-danger">City Feild is required</span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>State</label>
+                <input class="form-control"  #state="ngModel" [(ngModel)]="detail.state" name="state" required>
+            </div>
+            <div [hidden]="state.valid || !state.touched">
+                <span class="text-danger">State Feild is required</span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Zip Code</label>
+                <input class="form-control"  #zip="ngModel" [(ngModel)]="detail.zipCode" name="zip" placeholder="000000" required maxlength=6 minlength=6 pattern="[0-9]*">
+            </div>
+            <div [hidden]="zip.valid || !zip.touched">
+                <span class="text-danger">zip Feild is required</span>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Total Payable Amount</label>
+                <input class="form-control"  name="tamount" required disabled value="{{total}}">
+            </div>
+            
+            <div class="text-center">
+                <button class=" mt-5 orderbtn btn btn-lg btn-light" [disabled]="form.invalid">Place Order</button>
+            </div>
+            
+
+        </form>
+    </div>
+</div>

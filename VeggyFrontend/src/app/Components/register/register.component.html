@@ -1,0 +1,46 @@
+<div class="container myform">
+    <form class="w-75  mx-auto" #form="ngForm"  (ngSubmit)="onSubmit()">
+        <h1 class="text-center">REGISTER</h1>
+        
+        
+        <div class=" mt-3">
+            <label>UserName</label>
+            <input appCustomValidation class="form-control" name="user" #user="ngModel" [(ngModel)]="register.userName"  required pattern="[A-z0-9_]{4,20}">
+        </div>
+        <div [hidden]="user.valid || !user.touched">
+            <span class="text-danger">Username should only contain alphabets,numbers and underscore</span>
+        </div>
+        <div [hidden]="user.valid || !user.touched">
+            <span class="text-danger">Minimum 4 characters is required</span>
+        </div>
+        
+        
+
+
+        <div class=" mt-3">
+            <label>Email</label>
+            <input  type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="register.email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"required>
+        </div>
+        <div [hidden]="email.valid || !email.touched">
+            <span class="text-danger">Valid Email is required</span>
+        </div>
+
+        <div class=" mt-3">
+            <label>Password</label>
+            <input type="password" name="password" #pass="ngModel" class="form-control" [(ngModel)]="register.password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}"> 
+        </div>
+        <div [hidden]="pass.valid || !pass.touched">
+            <span class="text-danger">Password must contains atleast 8 characters,one capital letter ,one lower letter,one number and one special symbol(!@#$%^&*=+-_)</span>
+        </div>
+        <div class=" mt-3">
+            <label>Confirm Password</label>
+            <input type="password" ngValidateEqual="password" #cpass="ngModel" name="confirm_pass" class="form-control" [(ngModel)]="register.confirm_password" required>
+        </div>
+        <div [hidden]=" pass.invalid || (cpass.dirty && cpass.valid)">
+            <span class="text-danger">Password don't match </span>
+        </div>
+
+
+        <button class="btn bg-dark text-light mt-3 form-control" [disabled]="form.invalid">Register</button>
+    </form>
+</div>

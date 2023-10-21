@@ -1,0 +1,83 @@
+.bigBox{
+    margin:2% auto;
+    border: 5px solid black;
+    height: auto;
+    padding: 5%;
+    box-shadow: -15px 15px 10px black;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+
+    
+}
+.veggyBox{
+    height: 250px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 5% 5%;
+    padding: 2%;
+    border-radius: 20px;
+    background:linear-gradient(rgb(4, 36, 0),black);
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    box-shadow: 10px 10px 8px black;
+    /* background-image: url(https://i.pinimg.com/736x/f2/f0/99/f2f099a87b5abb03b78ed68ef5a32cad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+
+.veggyBtn{
+    background-color: antiquewhite;
+    color: black;
+    font-weight: 500;
+}
+.veggyBtn:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+
+
+
+.fruitBox{
+    height: 250px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 5% auto;
+    padding: 2%;
+    border-radius: 20px;
+    background:linear-gradient(black,rgb(4, 36, 0));
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    box-shadow: 10px 10px 8px black;
+    /* background-image: url(https://www.shutterstock.com/image-vector/natural-delicious-fruits-border-summer-260nw-1670123245.jpg); */
+    /*background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.fruitsBtn{
+    background-color: antiquewhite;
+    color: black;
+    font-weight: 500;
+}
+.fruitsBtn:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+
+
+.tagline{
+    color: ghostwhite;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 2%;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px green;
+}
+
+/* @media screen and (min-width: 400px ) {
+    
+}
+ */
